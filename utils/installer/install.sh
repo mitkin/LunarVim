@@ -330,7 +330,7 @@ function install_python_deps() {
   fi
   echo "Installing with pip.."
   for dep in "${__pip_deps[@]}"; do
-    python3 -m pip install --user "$dep" || return 1
+    python3 -m pip install "$dep" || return 1
   done
   echo "All Python dependencies are successfully installed"
 }
